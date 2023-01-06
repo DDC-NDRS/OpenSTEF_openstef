@@ -12,6 +12,14 @@ openstef.model.regressors.custom\_regressor module
    :undoc-members:
    :show-inheritance:
 
+openstef.model.regressors.dazls module
+--------------------------------------
+
+.. automodule:: openstef.model.regressors.dazls
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 openstef.model.regressors.lgbm module
 -------------------------------------
 
@@ -44,14 +52,6 @@ openstef.model.regressors.regressor module
    :undoc-members:
    :show-inheritance:
 
-openstef.model.regressors.regressor\_interface module
------------------------------------------------------
-
-.. automodule:: openstef.model.regressors.regressor_interface
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 openstef.model.regressors.xgb module
 ------------------------------------
 
@@ -67,7 +67,6 @@ openstef.model.regressors.xgb\_quantile module
    :members:
    :undoc-members:
    :show-inheritance:
-
 
 Module contents
 ---------------
