@@ -544,10 +544,6 @@
 <li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.general.remove_non_requested_feature_columns"><code class="docutils literal notranslate"><span class="pre">remove_non_requested_feature_columns()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="openstef.feature_engineering.html#module-openstef.feature_engineering.historic_features">openstef.feature_engineering.historic_features module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.historic_features.add_historic_load_as_a_feature"><code class="docutils literal notranslate"><span class="pre">add_historic_load_as_a_feature()</span></code></a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="openstef.feature_engineering.html#module-openstef.feature_engineering.holiday_features">openstef.feature_engineering.holiday_features module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.holiday_features.check_for_bridge_day"><code class="docutils literal notranslate"><span class="pre">check_for_bridge_day()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.holiday_features.generate_holiday_feature_functions"><code class="docutils literal notranslate"><span class="pre">generate_holiday_feature_functions()</span></code></a></li>
@@ -636,7 +632,6 @@
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#module-openstef.model.regressors.dazls">openstef.model.regressors.dazls module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#module-openstef.model.regressors.lgbm">openstef.model.regressors.lgbm module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#module-openstef.model.regressors.linear">openstef.model.regressors.linear module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef-model-regressors-proloaf-module">openstef.model.regressors.proloaf module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#module-openstef.model.regressors.regressor">openstef.model.regressors.regressor module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#module-openstef.model.regressors.xgb">openstef.model.regressors.xgb module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#module-openstef.model.regressors.xgb_quantile">openstef.model.regressors.xgb_quantile module</a></li>
@@ -689,11 +684,6 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="openstef.model.html#openstef.model.objective.LinearRegressorObjective"><code class="docutils literal notranslate"><span class="pre">LinearRegressorObjective</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.objective.LinearRegressorObjective.get_params"><code class="docutils literal notranslate"><span class="pre">LinearRegressorObjective.get_params()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="openstef.model.html#openstef.model.objective.ProLoafRegressorObjective"><code class="docutils literal notranslate"><span class="pre">ProLoafRegressorObjective</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.objective.ProLoafRegressorObjective.get_params"><code class="docutils literal notranslate"><span class="pre">ProLoafRegressorObjective.get_params()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.objective.ProLoafRegressorObjective.get_pruning_callback"><code class="docutils literal notranslate"><span class="pre">ProLoafRegressorObjective.get_pruning_callback()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="openstef.model.html#openstef.model.objective.RegressorObjective"><code class="docutils literal notranslate"><span class="pre">RegressorObjective</span></code></a><ul>
@@ -832,6 +822,7 @@
 <li class="toctree-l3"><a class="reference internal" href="openstef.postprocessing.html#openstef.postprocessing.postprocessing.calculate_wind_power"><code class="docutils literal notranslate"><span class="pre">calculate_wind_power()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="openstef.postprocessing.html#openstef.postprocessing.postprocessing.normalize_and_convert_weather_data_for_splitting"><code class="docutils literal notranslate"><span class="pre">normalize_and_convert_weather_data_for_splitting()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="openstef.postprocessing.html#openstef.postprocessing.postprocessing.post_process_wind_solar"><code class="docutils literal notranslate"><span class="pre">post_process_wind_solar()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.postprocessing.html#openstef.postprocessing.postprocessing.sort_quantiles"><code class="docutils literal notranslate"><span class="pre">sort_quantiles()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="openstef.postprocessing.html#openstef.postprocessing.postprocessing.split_forecast_in_components"><code class="docutils literal notranslate"><span class="pre">split_forecast_in_components()</span></code></a></li>
 </ul>
 </li>
@@ -902,12 +893,6 @@
 <li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.optimize_hyperparameters.optimize_hyperparameters_task"><code class="docutils literal notranslate"><span class="pre">optimize_hyperparameters_task()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="openstef.tasks.html#module-openstef.tasks.run_tracy">openstef.tasks.run_tracy module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.run_tracy.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.run_tracy.run_tracy"><code class="docutils literal notranslate"><span class="pre">run_tracy()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.run_tracy.run_tracy_job"><code class="docutils literal notranslate"><span class="pre">run_tracy_job()</span></code></a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="openstef.tasks.html#module-openstef.tasks.split_forecast">openstef.tasks.split_forecast module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.split_forecast.convert_coefdict_to_coefsdf"><code class="docutils literal notranslate"><span class="pre">convert_coefdict_to_coefsdf()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.split_forecast.determine_invalid_coefs"><code class="docutils literal notranslate"><span class="pre">determine_invalid_coefs()</span></code></a></li>
@@ -943,6 +928,46 @@
 </section>
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
+</section>
+<section id="module-openstef.app_settings">
+<span id="openstef-app-settings-module"></span><h2>openstef.app_settings module<a class="headerlink" href="#module-openstef.app_settings" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="openstef.app_settings.AppSettings">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">openstef.app_settings.</span></span><span class="sig-name descname"><span class="pre">AppSettings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_case_sensitive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PosixPath('.')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_file_encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_ignore_empty</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_nested_delimiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_parse_none_str</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_secrets_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openstef.app_settings.AppSettings" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseSettings</span></code></p>
+<p>Global app settings.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.app_settings.AppSettings.log_level">
+<span class="sig-name descname"><span class="pre">log_level</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#openstef.app_settings.AppSettings.log_level" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.app_settings.AppSettings.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#openstef.app_settings.AppSettings.model_computed_fields" title="Link to this definition">#</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.app_settings.AppSettings.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">SettingsConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'arbitrary_types_allowed':</span> <span class="pre">True,</span> <span class="pre">'case_sensitive':</span> <span class="pre">False,</span> <span class="pre">'env_file':</span> <span class="pre">'.env',</span> <span class="pre">'env_file_encoding':</span> <span class="pre">None,</span> <span class="pre">'env_ignore_empty':</span> <span class="pre">False,</span> <span class="pre">'env_nested_delimiter':</span> <span class="pre">None,</span> <span class="pre">'env_parse_none_str':</span> <span class="pre">None,</span> <span class="pre">'env_prefix':</span> <span class="pre">'openstef_',</span> <span class="pre">'extra':</span> <span class="pre">'ignore',</span> <span class="pre">'json_file':</span> <span class="pre">None,</span> <span class="pre">'json_file_encoding':</span> <span class="pre">None,</span> <span class="pre">'protected_namespaces':</span> <span class="pre">('model_',</span> <span class="pre">'settings_'),</span> <span class="pre">'secrets_dir':</span> <span class="pre">None,</span> <span class="pre">'toml_file':</span> <span class="pre">None,</span> <span class="pre">'validate_default':</span> <span class="pre">True,</span> <span class="pre">'yaml_file':</span> <span class="pre">None,</span> <span class="pre">'yaml_file_encoding':</span> <span class="pre">None}</span></em><a class="headerlink" href="#openstef.app_settings.AppSettings.model_config" title="Link to this definition">#</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.app_settings.AppSettings.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'log_level':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=False,</span> <span class="pre">default='INFO',</span> <span class="pre">description='Log</span> <span class="pre">level</span> <span class="pre">used</span> <span class="pre">for</span> <span class="pre">logging</span> <span class="pre">statements.'),</span> <span class="pre">'post_teams_messages':</span> <span class="pre">FieldInfo(annotation=bool,</span> <span class="pre">required=False,</span> <span class="pre">default=True)}</span></em><a class="headerlink" href="#openstef.app_settings.AppSettings.model_fields" title="Link to this definition">#</a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.app_settings.AppSettings.post_teams_messages">
+<span class="sig-name descname"><span class="pre">post_teams_messages</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#openstef.app_settings.AppSettings.post_teams_messages" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="module-openstef.enums">
 <span id="openstef-enums-module"></span><h2>openstef.enums module<a class="headerlink" href="#module-openstef.enums" title="Link to this heading">#</a></h2>
@@ -994,11 +1019,6 @@
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="openstef.enums.MLModelType.ProLoaf">
-<span class="sig-name descname"><span class="pre">ProLoaf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'proloaf'</span></em><a class="headerlink" href="#openstef.enums.MLModelType.ProLoaf" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
 <dt class="sig sig-object py" id="openstef.enums.MLModelType.XGB">
 <span class="sig-name descname"><span class="pre">XGB</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'xgb'</span></em><a class="headerlink" href="#openstef.enums.MLModelType.XGB" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
@@ -1028,28 +1048,6 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="openstef.enums.PipelineType.TRAIN">
 <span class="sig-name descname"><span class="pre">TRAIN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'train'</span></em><a class="headerlink" href="#openstef.enums.PipelineType.TRAIN" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="openstef.enums.TracyJobResult">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">openstef.enums.</span></span><span class="sig-name descname"><span class="pre">TracyJobResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openstef.enums.TracyJobResult" title="Link to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
-<p>An enumeration.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="openstef.enums.TracyJobResult.FAILED">
-<span class="sig-name descname"><span class="pre">FAILED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'failed'</span></em><a class="headerlink" href="#openstef.enums.TracyJobResult.FAILED" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="openstef.enums.TracyJobResult.SUCCESS">
-<span class="sig-name descname"><span class="pre">SUCCESS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'success'</span></em><a class="headerlink" href="#openstef.enums.TracyJobResult.SUCCESS" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="openstef.enums.TracyJobResult.UNKNOWN">
-<span class="sig-name descname"><span class="pre">UNKNOWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'unknown'</span></em><a class="headerlink" href="#openstef.enums.TracyJobResult.UNKNOWN" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1136,6 +1134,9 @@
 </dd></dl>
 
 </section>
+<section id="module-openstef.settings">
+<span id="openstef-settings-module"></span><h2>openstef.settings module<a class="headerlink" href="#module-openstef.settings" title="Link to this heading">#</a></h2>
+</section>
 <section id="module-openstef">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-openstef" title="Link to this heading">#</a></h2>
 </section>
@@ -1188,6 +1189,69 @@
   <a class="reference internal nav-link" href="#submodules">
    Submodules
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-openstef.app_settings">
+   openstef.app_settings module
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#openstef.app_settings.AppSettings">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       AppSettings
+      </span>
+     </code>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.app_settings.AppSettings.log_level">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         AppSettings.log_level
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.app_settings.AppSettings.model_computed_fields">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         AppSettings.model_computed_fields
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.app_settings.AppSettings.model_config">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         AppSettings.model_config
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.app_settings.AppSettings.model_fields">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         AppSettings.model_fields
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.app_settings.AppSettings.post_teams_messages">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         AppSettings.post_teams_messages
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#module-openstef.enums">
@@ -1278,15 +1342,6 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#openstef.enums.MLModelType.ProLoaf">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         MLModelType.ProLoaf
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#openstef.enums.MLModelType.XGB">
        <code class="docutils literal notranslate">
         <span class="pre">
@@ -1338,44 +1393,6 @@
        <code class="docutils literal notranslate">
         <span class="pre">
          PipelineType.TRAIN
-        </span>
-       </code>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#openstef.enums.TracyJobResult">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       TracyJobResult
-      </span>
-     </code>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#openstef.enums.TracyJobResult.FAILED">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         TracyJobResult.FAILED
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#openstef.enums.TracyJobResult.SUCCESS">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         TracyJobResult.SUCCESS
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#openstef.enums.TracyJobResult.UNKNOWN">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         TracyJobResult.UNKNOWN
         </span>
        </code>
       </a>
@@ -1489,6 +1506,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-openstef.settings">
+   openstef.settings module
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#module-openstef">
