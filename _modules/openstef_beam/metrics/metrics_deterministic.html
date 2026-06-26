@@ -26,8 +26,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=0790524f97105ba85085" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=0790524f97105ba85085" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=a95f357e85573c9b56d5" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=a95f357e85573c9b56d5" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=3f5a9049" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=0790524f97105ba85085"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=a95f357e85573c9b56d5"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=0790524f97105ba85085" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=0790524f97105ba85085" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=a95f357e85573c9b56d5" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=a95f357e85573c9b56d5" />
 
     <script src="../../../_static/documentation_options.js?v=7026087e"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -486,7 +486,7 @@ window.addEventListener("load", load);
 window.runMermaid = runMermaid;</script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_modules/openstef_beam/metrics/metrics_deterministic';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.18.0';
+        DOCUMENTATION_OPTIONS.theme_version = '0.19.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = '_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
@@ -1457,6 +1457,56 @@ window.runMermaid = runMermaid;</script>
 
 
 
+<div class="viewcode-block" id="pinball_loss">
+<a class="viewcode-back" href="../../../api/generated/openstef_beam.metrics.pinball_loss.html#openstef_beam.metrics.pinball_loss">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">pinball_loss</span><span class="p">(</span>
+    <span class="n">y_true</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">],</span>
+    <span class="n">y_pred</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">],</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">quantile</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">sample_weights</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate the Pinball Loss (also known as Quantile Loss) for a single quantile.</span>
+
+<span class="sd">    The Pinball Loss is a scoring rule for a single quantile forecast that</span>
+<span class="sd">    penalizes under- and over-predictions differently based on the quantile level.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        y_true: Ground truth values with shape (num_samples,).</span>
+<span class="sd">        y_pred: Predicted quantile values with shape (num_samples,).</span>
+<span class="sd">        quantile: The quantile level being predicted (e.g., 0.1, 0.5, 0.9).</span>
+<span class="sd">            Must be in [0, 1].</span>
+<span class="sd">        sample_weights: Optional weights for each sample with shape (num_samples,).</span>
+<span class="sd">            If None, all samples are weighted equally.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The average Pinball Loss as a float. Lower is better.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        Basic usage for 10th percentile predictions</span>
+
+<span class="sd">        &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">        &gt;&gt;&gt; y_true = np.array([100, 120, 110])</span>
+<span class="sd">        &gt;&gt;&gt; y_pred = np.array([95, 116, 111])</span>
+<span class="sd">        &gt;&gt;&gt; pinball_loss(y_true, y_pred, quantile=0.1)</span>
+<span class="sd">        0.6</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Ensure inputs are numpy arrays</span>
+    <span class="n">y_true</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">y_true</span><span class="p">)</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">y_pred</span><span class="p">)</span>
+
+    <span class="c1"># Calculate pinball loss for each sample</span>
+    <span class="n">errors</span> <span class="o">=</span> <span class="n">y_true</span> <span class="o">-</span> <span class="n">y_pred</span>
+    <span class="n">losses</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+        <span class="n">errors</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">quantile</span> <span class="o">*</span> <span class="n">errors</span><span class="p">,</span>  <span class="c1"># Under-prediction</span>
+        <span class="p">(</span><span class="n">quantile</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">errors</span><span class="p">,</span>  <span class="c1"># Over-prediction</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">losses</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">sample_weights</span><span class="p">))</span></div>
+
+
+
 <div class="viewcode-block" id="relative_pinball_loss">
 <a class="viewcode-back" href="../../../api/generated/openstef_beam.metrics.relative_pinball_loss.html#openstef_beam.metrics.relative_pinball_loss">[docs]</a>
 <span class="k">def</span><span class="w"> </span><span class="nf">relative_pinball_loss</span><span class="p">(</span>
@@ -1472,8 +1522,7 @@ window.runMermaid = runMermaid;</script>
 
 <span class="sd">    The relative pinball loss normalizes the pinball loss by the range of true values,</span>
 <span class="sd">    making it scale-invariant and suitable for comparing quantile prediction errors</span>
-<span class="sd">    across different datasets or time periods. The pinball loss can be used to quantify</span>
-<span class="sd">    the accuracy of a single quantile.</span>
+<span class="sd">    across different datasets or time periods.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        y_true: Ground truth values with shape (num_samples,).</span>
@@ -1507,16 +1556,8 @@ window.runMermaid = runMermaid;</script>
     <span class="k">if</span> <span class="n">y_true</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">y_pred</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;NaN&quot;</span><span class="p">)</span>
 
-    <span class="c1"># Calculate pinball loss for each sample</span>
-    <span class="n">errors</span> <span class="o">=</span> <span class="n">y_true</span> <span class="o">-</span> <span class="n">y_pred</span>
-    <span class="n">pinball_losses</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
-        <span class="n">errors</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="n">quantile</span> <span class="o">*</span> <span class="n">errors</span><span class="p">,</span>  <span class="c1"># Under-prediction</span>
-        <span class="p">(</span><span class="n">quantile</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">errors</span><span class="p">,</span>  <span class="c1"># Over-prediction</span>
-    <span class="p">)</span>
-
-    <span class="c1"># Calculate mean pinball loss (weighted if weights provided)</span>
-    <span class="n">mean_pinball_loss</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">pinball_losses</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">sample_weights</span><span class="p">)</span>
+    <span class="c1"># Calculate pinball loss (weighted if weights provided)</span>
+    <span class="n">pinball_loss_quantile</span> <span class="o">=</span> <span class="n">pinball_loss</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">quantile</span><span class="o">=</span><span class="n">quantile</span><span class="p">,</span> <span class="n">sample_weights</span><span class="o">=</span><span class="n">sample_weights</span><span class="p">)</span>
 
     <span class="c1"># Calculate measurement range for normalization</span>
     <span class="n">y_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="n">measurement_range_upper_q</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="n">measurement_range_lower_q</span><span class="p">)</span>
@@ -1526,7 +1567,7 @@ window.runMermaid = runMermaid;</script>
         <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;NaN&quot;</span><span class="p">)</span>
 
     <span class="c1"># Calculate relative pinball loss</span>
-    <span class="n">relative_pinball_loss</span> <span class="o">=</span> <span class="n">mean_pinball_loss</span> <span class="o">/</span> <span class="n">y_range</span>
+    <span class="n">relative_pinball_loss</span> <span class="o">=</span> <span class="n">pinball_loss_quantile</span> <span class="o">/</span> <span class="n">y_range</span>
 
     <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">relative_pinball_loss</span><span class="p">)</span></div>
 
@@ -1559,8 +1600,8 @@ window.runMermaid = runMermaid;</script>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=0790524f97105ba85085"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=0790524f97105ba85085"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=a95f357e85573c9b56d5"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=a95f357e85573c9b56d5"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1594,7 +1635,7 @@ window.runMermaid = runMermaid;</script>
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.18.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.19.0.
 </p></div>
       
     </div>
