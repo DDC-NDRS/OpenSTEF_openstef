@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=a95f357e85573c9b56d5" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=a95f357e85573c9b56d5" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -38,10 +38,10 @@
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=3f5a9049" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../_static/scripts/fontawesome.js?digest=a95f357e85573c9b56d5"></script>
+  <script defer src="../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=a95f357e85573c9b56d5" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=a95f357e85573c9b56d5" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
 
     <script src="../../_static/documentation_options.js?v=7026087e"></script>
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -51,7 +51,7 @@
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'user_guide/guides/probabilistic_forecasting';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.19.0';
+        DOCUMENTATION_OPTIONS.theme_version = '0.20.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = '_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
@@ -383,7 +383,8 @@
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item pst-sidebar-collapse"><button id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar"><svg class="pst-icon svg-inline--fa" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+        <div class="sidebar-primary-item pst-sidebar-collapse"><button id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar">
+  <svg class="pst-icon" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
     <path fill="currentColor" d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z"/>
   </svg>
   <span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
@@ -681,8 +682,42 @@ covers 60% of outcomes); below means <em>under-predicting</em>.</span><a class="
 <p class="admonition-title">Warning</p>
 <p>The calibrator must be fitted (via <code class="docutils literal notranslate"><span class="pre">workflow.fit()</span></code>) before it can be used for prediction. Calling <code class="docutils literal notranslate"><span class="pre">predict()</span></code> on a workflow with an unfitted calibrator will raise a <a class="reference internal" href="../../api/generated/openstef_core.exceptions.NotFittedError.html#openstef_core.exceptions.NotFittedError" title="openstef_core.exceptions.NotFittedError"><code class="xref py py-class docutils literal notranslate"><span class="pre">NotFittedError</span></code></a>.</p>
 </div>
-<p>For a complete worked example showing calibration before and after, including diagnostic plots, see <a class="reference internal" href="../../tutorials/quantile_calibration.html"><span class="doc">Quantile Calibration</span></a>.</p>
+<p>For a complete worked example showing isotonic and asymmetric conformal
+calibration before and after, including diagnostic plots, see
+<a class="reference internal" href="../../tutorials/quantile_calibration.html"><span class="doc">Quantile Calibration</span></a>.</p>
 </section>
+</section>
+<section id="conformalized-quantile-calibration">
+<h2>Conformalized Quantile Calibration<a class="headerlink" href="#conformalized-quantile-calibration" title="Link to this heading">#</a></h2>
+<p>OpenSTEF also provides a dependency-free
+<code class="xref py py-class docutils literal notranslate"><span class="pre">ConformalizedQuantileCalibrator</span></code>
+that implements asymmetric finite-sample conformal calibration. It is a
+postprocessing transform over a
+<code class="docutils literal notranslate"><span class="pre">ForecastDataset</span></code>:</p>
+<ol class="arabic simple">
+<li><p>Fit the forecaster and generate forecasts for a time-ordered calibration
+period.</p></li>
+<li><p>Fit the calibrator on those forecasts and the corresponding actuals.</p></li>
+<li><p>Apply the fitted corrections to later forecast datasets.</p></li>
+</ol>
+<p>The correction is asymmetric by tail. For a lower quantile <code class="docutils literal notranslate"><span class="pre">q</span> <span class="pre">&lt;</span> <span class="pre">0.5</span></code>, the
+calibrator uses <code class="docutils literal notranslate"><span class="pre">forecast</span> <span class="pre">-</span> <span class="pre">actual</span></code> scores and subtracts the finite-sample
+quantile at <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">-</span> <span class="pre">q</span></code>. For an upper quantile <code class="docutils literal notranslate"><span class="pre">q</span> <span class="pre">&gt;=</span> <span class="pre">0.5</span></code>, it uses <code class="docutils literal notranslate"><span class="pre">actual</span> <span class="pre">-</span>
+<span class="pre">forecast</span></code> scores and adds the finite-sample quantile at <code class="docutils literal notranslate"><span class="pre">q</span></code>. The finite-sample
+level is adjusted with <code class="docutils literal notranslate"><span class="pre">min(level</span> <span class="pre">*</span> <span class="pre">(n</span> <span class="pre">+</span> <span class="pre">1)</span> <span class="pre">/</span> <span class="pre">n,</span> <span class="pre">1)</span></code> and estimated with
+NumPy’s <code class="docutils literal notranslate"><span class="pre">method=&quot;higher&quot;</span></code> convention.</p>
+<p>By default, P50 is unchanged and quantile columns are not sorted inside the
+calibrator. This preserves the specified semantics: median calibration is an
+explicit opt-in, while downstream
+<code class="xref py py-class docutils literal notranslate"><span class="pre">QuantileSorter</span></code>
+owns the quantile-ordering invariant.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">openstef_models.transforms.postprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">ConformalizedQuantileCalibrator</span>
+
+<span class="n">calibrator</span> <span class="o">=</span> <span class="n">ConformalizedQuantileCalibrator</span><span class="p">(</span><span class="n">quantiles</span><span class="o">=</span><span class="n">quantiles</span><span class="p">)</span>
+<span class="n">calibrator</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">calibration_forecasts_with_actuals</span><span class="p">)</span>
+<span class="n">calibrated_forecasts</span> <span class="o">=</span> <span class="n">calibrator</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">forecasts</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
 <section id="evaluating-probabilistic-forecasts">
 <h2>Evaluating Probabilistic Forecasts<a class="headerlink" href="#evaluating-probabilistic-forecasts" title="Link to this heading">#</a></h2>
@@ -765,6 +800,7 @@ covers 60% of outcomes); below means <em>under-predicting</em>.</span><a class="
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-calibration-to-a-workflow">Adding Calibration to a Workflow</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conformalized-quantile-calibration">Conformalized Quantile Calibration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluating-probabilistic-forecasts">Evaluating Probabilistic Forecasts</a></li>
 </ul>
   </nav></div>
@@ -798,8 +834,8 @@ covers 60% of outcomes); below means <em>under-predicting</em>.</span><a class="
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=a95f357e85573c9b56d5"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=a95f357e85573c9b56d5"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -833,7 +869,7 @@ covers 60% of outcomes); below means <em>under-predicting</em>.</span><a class="
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.19.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
 </p></div>
       
     </div>
