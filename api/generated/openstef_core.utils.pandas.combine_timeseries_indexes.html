@@ -62,7 +62,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="nan_aware_weighted_mean" href="openstef_core.utils.pandas.nan_aware_weighted_mean.html" />
-    <link rel="prev" title="pandas" href="openstef_core.utils.pandas.html" />
+    <link rel="prev" title="as_float_series" href="openstef_core.utils.pandas.as_float_series.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="0.0.0" />
@@ -462,6 +462,7 @@
 </ul>
 </details></li>
 <li class="toctree-l3 current active has-children"><a class="reference internal" href="openstef_core.utils.pandas.html">pandas</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="openstef_core.utils.pandas.as_float_series.html">as_float_series</a></li>
 <li class="toctree-l4 current active"><a class="current reference internal" href="#">combine_timeseries_indexes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef_core.utils.pandas.nan_aware_weighted_mean.html">nan_aware_weighted_mean</a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef_core.utils.pandas.normalize_to_unit_sum.html">normalize_to_unit_sum</a></li>
@@ -505,6 +506,7 @@
 <li class="toctree-l3"><a class="reference internal" href="openstef_core.exceptions.ModelLoadingError.html">ModelLoadingError</a></li>
 <li class="toctree-l3"><a class="reference internal" href="openstef_core.exceptions.ModelNotFoundError.html">ModelNotFoundError</a></li>
 <li class="toctree-l3"><a class="reference internal" href="openstef_core.exceptions.NotFittedError.html">NotFittedError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef_core.exceptions.OpenSTEFVersionCompatibilityError.html">OpenSTEFVersionCompatibilityError</a></li>
 <li class="toctree-l3"><a class="reference internal" href="openstef_core.exceptions.PredictError.html">PredictError</a></li>
 <li class="toctree-l3"><a class="reference internal" href="openstef_core.exceptions.TimeSeriesValidationError.html">TimeSeriesValidationError</a></li>
 <li class="toctree-l3"><a class="reference internal" href="openstef_core.exceptions.UnreachableStateError.html">UnreachableStateError</a></li>
@@ -570,6 +572,11 @@
 <li class="toctree-l3"><a class="reference internal" href="openstef_core.types.LeadTime.html">LeadTime</a></li>
 <li class="toctree-l3"><a class="reference internal" href="openstef_core.types.Q.html">Q</a></li>
 <li class="toctree-l3"><a class="reference internal" href="openstef_core.types.Quantile.html">Quantile</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="openstef_core.versioning.html">versioning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef_core.versioning.get_runtime_openstef_version.html">get_runtime_openstef_version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef_core.versioning.is_openstef_compatible.html">is_openstef_compatible</a></li>
 </ul>
 </details></li>
 </ul>
@@ -652,16 +659,20 @@
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="openstef_models.explainability.plotters.html">plotters</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef_models.explainability.plotters.common.html">common</a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef_models.explainability.plotters.contributions_plotter.html">contributions_plotter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef_models.explainability.plotters.feature_importance_plotter.html">feature_importance_plotter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef_models.explainability.plotters.model_contributions_plotter.html">model_contributions_plotter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef_models.explainability.plotters.ContributionsPlotter.html">ContributionsPlotter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef_models.explainability.plotters.FeatureImportancePlotter.html">FeatureImportancePlotter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef_models.explainability.plotters.ModelContributionsPlotter.html">ModelContributionsPlotter</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3"><a class="reference internal" href="openstef_models.explainability.ContributionsMixin.html">ContributionsMixin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="openstef_models.explainability.ContributionsPlotter.html">ContributionsPlotter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="openstef_models.explainability.ExplainableForecaster.html">ExplainableForecaster</a></li>
 <li class="toctree-l3"><a class="reference internal" href="openstef_models.explainability.FeatureImportancePlotter.html">FeatureImportancePlotter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef_models.explainability.ModelContributionsPlotter.html">ModelContributionsPlotter</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="openstef_models.mixins.html">mixins</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -1267,14 +1278,14 @@
 <h1>combine_timeseries_indexes<a class="headerlink" href="#combine-timeseries-indexes" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="openstef_core.utils.pandas.combine_timeseries_indexes">
-<span class="sig-prename descclassname"><span class="pre">openstef_core.utils.pandas.</span></span><span class="sig-name descname"><span class="pre">combine_timeseries_indexes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indexes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.15)"><span class="pre">Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DatetimeIndex.html#pandas.DatetimeIndex" title="(in pandas v3.0.6)"><span class="pre">DatetimeIndex</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DatetimeIndex.html#pandas.DatetimeIndex" title="(in pandas v3.0.6)"><span class="pre">DatetimeIndex</span></a></span></span><a class="reference internal" href="../../_modules/openstef_core/utils/pandas.html#combine_timeseries_indexes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#openstef_core.utils.pandas.combine_timeseries_indexes" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">openstef_core.utils.pandas.</span></span><span class="sig-name descname"><span class="pre">combine_timeseries_indexes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indexes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.15)"><span class="pre">Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DatetimeIndex.html#pandas.DatetimeIndex" title="(in pandas v3.1)"><span class="pre">DatetimeIndex</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DatetimeIndex.html#pandas.DatetimeIndex" title="(in pandas v3.1)"><span class="pre">DatetimeIndex</span></a></span></span><a class="reference internal" href="../../_modules/openstef_core/utils/pandas.html#combine_timeseries_indexes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#openstef_core.utils.pandas.combine_timeseries_indexes" title="Link to this definition">#</a></dt>
 <dd><p>Combine multiple datetime indexes into a single sorted index.</p>
 <p>Merges several pandas DatetimeIndex objects into one, ensuring that the
 resulting index is sorted and contains no duplicate timestamps.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>indexes</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code></a>[<a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DatetimeIndex.html#pandas.DatetimeIndex" title="(in pandas v3.0.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">DatetimeIndex</span></code></a>]</span>) – Sequence of pandas DatetimeIndex objects to combine.</p></li>
+<li><p><strong>indexes</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code></a>[<a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DatetimeIndex.html#pandas.DatetimeIndex" title="(in pandas v3.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">DatetimeIndex</span></code></a>]</span>) – Sequence of pandas DatetimeIndex objects to combine.</p></li>
 <li><p><strong>indexes</strong></p></li>
 </ul>
 </dd>
@@ -1283,7 +1294,7 @@ resulting index is sorted and contains no duplicate timestamps.</p>
 order.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DatetimeIndex.html#pandas.DatetimeIndex" title="(in pandas v3.0.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">DatetimeIndex</span></code></a></span></p>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DatetimeIndex.html#pandas.DatetimeIndex" title="(in pandas v3.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">DatetimeIndex</span></code></a></span></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1301,12 +1312,12 @@ order.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="openstef_core.utils.pandas.html"
+       href="openstef_core.utils.pandas.as_float_series.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">pandas</p>
+        <p class="prev-next-title">as_float_series</p>
       </div>
     </a>
     <a class="right-next"
