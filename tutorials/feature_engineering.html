@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 
@@ -27,10 +26,11 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=75c7c72ae941e8b558d8" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=75c7c72ae941e8b558d8" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_autodoc_typehints.css?v=057ac668" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
@@ -38,10 +38,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=3f5a9049" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
+  <script defer src="../_static/scripts/fontawesome.js?digest=75c7c72ae941e8b558d8"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=75c7c72ae941e8b558d8" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=75c7c72ae941e8b558d8" />
 
     <script src="../_static/documentation_options.js?v=7026087e"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
@@ -51,7 +51,7 @@
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/feature_engineering';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.21.0';
+        DOCUMENTATION_OPTIONS.theme_version = '0.24.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = '_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
@@ -61,9 +61,10 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Ensemble Forecasting" href="ensemble_forecasting.html" />
+    <link rel="next" title="School Holidays and a Christmas Forecast" href="school_holiday_forecasting.html" />
     <link rel="prev" title="Building a Custom Pipeline" href="custom_pipeline.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="color-scheme" content="light dark"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="0.0.0" />
   
@@ -113,7 +114,7 @@
   
     <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+  <button type="button" class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation" aria-expanded="false" aria-controls="pst-primary-sidebar-modal">
     <span class="fa-solid fa-bars"></span>
   </button>
   
@@ -198,7 +199,7 @@
         <div class="navbar-item navbar-persistent--container">
           
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
  <i class="fa-solid fa-magnifying-glass"></i>
  <span class="search-button__default-text">Search</span>
  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -209,15 +210,15 @@
         <div class="navbar-item">
 
 <div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
-    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
   </button>
   <ul class="dropdown-menu dropdown-menu-end">
-    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
-    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
-    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg me-1"></i>Dark</button></li>
   </ul>
 </div></div>
       
@@ -254,7 +255,7 @@
   
     <div class="navbar-persistent--mobile">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
  <i class="fa-solid fa-magnifying-glass"></i>
  <span class="search-button__default-text">Search</span>
  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -263,7 +264,7 @@
   
 
   
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+    <button type="button" class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page" aria-expanded="false" aria-controls="pst-secondary-sidebar-modal">
       <span class="fa-solid fa-outdent"></span>
     </button>
   
@@ -277,7 +278,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <dialog id="pst-primary-sidebar-modal" tabindex="-1"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
@@ -340,15 +341,15 @@
           <div class="navbar-item">
 
 <div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
-    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
   </button>
   <ul class="dropdown-menu dropdown-menu-end">
-    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
-    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
-    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg me-1"></i>Dark</button></li>
   </ul>
 </div></div>
         
@@ -383,7 +384,7 @@
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item pst-sidebar-collapse"><button id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar">
+        <div class="sidebar-primary-item pst-sidebar-collapse"><button type="button" id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar">
   <svg class="pst-icon" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
     <path fill="currentColor" d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z"/>
   </svg>
@@ -404,7 +405,8 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Training &amp; Forecasting</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="custom_pipeline.html">Custom Pipeline</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Feature Engineering</a></li>
+<li class="toctree-l1 current active"><a aria-current="page" class="current reference internal" href="#">Feature Engineering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="school_holiday_forecasting.html">School Holidays and a Christmas Forecast</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ensemble_forecasting.html">Ensemble Forecasting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hyperparameter_tuning_with_optuna.html">Hyperparameter Tuning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="foundation_model_forecasting_quickstart.html">Foundation Model Forecasting Quickstart</a></li>
@@ -421,6 +423,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../benchmarks/liander2024/README.html">Liander 2024</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../benchmarks/liander2024/run_xgboost_gblinear_benchmark.html">XGBoost &amp; GBLinear</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../benchmarks/liander2024/run_ensemble_benchmark.html">Ensemble Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../benchmarks/liander2024/run_chronos2_benchmark.html">Chronos-2 (zero-shot)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../benchmarks/liander2024/compare_benchmark_runs.html">Compare Results</a></li>
 </ul>
 </details></li>
@@ -474,7 +477,7 @@
     
     <li class="breadcrumb-item breadcrumb-home">
       <a href="../index.html" class="nav-link" aria-label="Home">
-        <i class="fa-solid fa-home"></i>
+        <i class="fa-solid fa-house"></i>
       </a>
     </li>
     
@@ -512,7 +515,7 @@ patterns to a model — <strong>feature engineering</strong> makes them explicit
 </thead>
 <tbody>
 <tr class="row-even"><td><p><strong>Time Domain</strong></p></td>
-<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CyclicFeaturesAdder</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">DatetimeFeaturesAdder</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">HolidayFeatureAdder</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">LagsAdder</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">RollingAggregatesAdder</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">VersionedLagsAdder</span></code></p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CyclicFeaturesAdder</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">DatetimeFeaturesAdder</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">HolidayFeatureAdder</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">SchoolHolidayFeatureAdder</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">LagsAdder</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">RollingAggregatesAdder</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">VersionedLagsAdder</span></code></p></td>
 <td><p>Encode temporal patterns</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Weather Domain</strong></p></td>
@@ -758,6 +761,145 @@ Friday and overpredict.</p>
 </details>
 <div class="cell_output docutils container">
 <img alt="../_images/aec4f10a73b19fea8bb0d55f14c339ae773d8cb7c86f98a46fc8e683b0f74e5c.png" src="../_images/aec4f10a73b19fea8bb0d55f14c339ae773d8cb7c86f98a46fc8e683b0f74e5c.png" />
+</div>
+</div>
+</section>
+<section id="schoolholidayfeatureadder">
+<h3><code class="xref py py-class docutils literal notranslate"><span class="pre">SchoolHolidayFeatureAdder</span></code><a class="headerlink" href="#schoolholidayfeatureadder" title="Link to this heading">#</a></h3>
+<p><strong>What:</strong> Adds an <code class="docutils literal notranslate"><span class="pre">is_school_holiday</span></code> flag from regional school holiday
+calendars. Dates come from the <a class="reference external" href="https://openholidaysapi.org">OpenHolidays API</a>,
+which is fetched once during training and can be exported to CSV, so
+forecasts never call the API. Set <code class="docutils literal notranslate"><span class="pre">one_hot_by_name=True</span></code> to also get one
+column per holiday name (for example <code class="docutils literal notranslate"><span class="pre">is_school_holiday_may_holidays</span></code>), or
+<code class="docutils literal notranslate"><span class="pre">regional_groups=True</span></code> to get one column per regional calendar when the
+region of a location is unknown.</p>
+<p><strong>Why for energy forecasting:</strong> Schools close for weeks at a time, which
+changes daytime load in households and in businesses that depend on school
+activity. In the Netherlands, school holidays are set per region, so the
+calendar is configured per subdivision.</p>
+<p><strong>Data attribution:</strong> School holiday data from OpenHolidays API
+(openholidaysapi.org), licensed under ODbL 1.0. Commercial use is permitted.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">tempfile</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">date</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">openstef_models.transforms.time_domain</span><span class="w"> </span><span class="kn">import</span> <span class="n">SchoolHolidayFeatureAdder</span>
+
+<span class="c1"># Export once for a date range. This is the only API request in this tutorial.</span>
+<span class="n">csv_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">tempfile</span><span class="o">.</span><span class="n">gettempdir</span><span class="p">())</span> <span class="o">/</span> <span class="s2">&quot;openstef_school_holidays_nl_nh_2024.csv&quot;</span>
+<span class="n">SchoolHolidayFeatureAdder</span><span class="p">(</span><span class="n">country_code</span><span class="o">=</span><span class="s2">&quot;NL&quot;</span><span class="p">,</span> <span class="n">subdivision_code</span><span class="o">=</span><span class="s2">&quot;NL-NH&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">export_csv</span><span class="p">(</span>
+    <span class="n">csv_path</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2024</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2024</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="c1"># Load from CSV. No network access and no fit step needed.</span>
+<span class="n">school_holidays</span> <span class="o">=</span> <span class="n">SchoolHolidayFeatureAdder</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span><span class="n">csv_path</span><span class="p">,</span> <span class="n">country_code</span><span class="o">=</span><span class="s2">&quot;NL&quot;</span><span class="p">,</span> <span class="n">subdivision_code</span><span class="o">=</span><span class="s2">&quot;NL-NH&quot;</span><span class="p">)</span>
+
+<span class="c1"># Late April to early May 2024 overlaps the May school holidays in NL-NH.</span>
+<span class="n">holiday_window</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">filter_by_range</span><span class="p">(</span>
+    <span class="n">start</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromisoformat</span><span class="p">(</span><span class="s2">&quot;2024-04-20T00:00:00Z&quot;</span><span class="p">),</span>
+    <span class="n">end</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromisoformat</span><span class="p">(</span><span class="s2">&quot;2024-05-10T00:00:00Z&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">school_holidays</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">holiday_window</span><span class="p">)</span>
+
+<span class="n">window_start</span> <span class="o">=</span> <span class="n">holiday_window</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">date</span><span class="p">()</span>
+<span class="n">window_end</span> <span class="o">=</span> <span class="n">holiday_window</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">date</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Added columns: </span><span class="si">{</span><span class="n">school_holidays</span><span class="o">.</span><span class="n">features_added</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;School holiday rows in window: </span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;is_school_holiday&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">period</span> <span class="ow">in</span> <span class="n">school_holidays</span><span class="o">.</span><span class="n">holidays</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">period</span><span class="o">.</span><span class="n">start_date</span> <span class="o">&lt;=</span> <span class="n">window_end</span> <span class="ow">and</span> <span class="n">period</span><span class="o">.</span><span class="n">end_date</span> <span class="o">&gt;=</span> <span class="n">window_start</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">period</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">period</span><span class="o">.</span><span class="n">start_date</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">period</span><span class="o">.</span><span class="n">end_date</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Opt in to one 0/1 column per holiday name, so each break can get its own effect.</span>
+<span class="n">named_holidays</span> <span class="o">=</span> <span class="n">SchoolHolidayFeatureAdder</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span>
+    <span class="n">csv_path</span><span class="p">,</span> <span class="n">country_code</span><span class="o">=</span><span class="s2">&quot;NL&quot;</span><span class="p">,</span> <span class="n">subdivision_code</span><span class="o">=</span><span class="s2">&quot;NL-NH&quot;</span><span class="p">,</span> <span class="n">one_hot_by_name</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+<span class="n">named_result</span> <span class="o">=</span> <span class="n">named_holidays</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">holiday_window</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;One-hot columns in window: </span><span class="si">{</span><span class="n">named_holidays</span><span class="o">.</span><span class="n">features_added</span><span class="p">()[</span><span class="mi">1</span><span class="p">:]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">named_result</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">named_holidays</span><span class="o">.</span><span class="n">features_added</span><span class="p">()[</span><span class="mi">1</span><span class="p">:]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Added columns: [&#39;is_school_holiday&#39;]
+School holiday rows in window: 864
+  May Holidays: 2024-04-27 to 2024-05-05
+One-hot columns in window: [&#39;is_school_holiday_autumn_holidays&#39;, &#39;is_school_holiday_christmas_holidays&#39;, &#39;is_school_holiday_may_holidays&#39;, &#39;is_school_holiday_spring_holidays&#39;, &#39;is_school_holiday_summer_holidays&#39;]
+is_school_holiday_autumn_holidays         0
+is_school_holiday_christmas_holidays      0
+is_school_holiday_may_holidays          864
+is_school_holiday_spring_holidays         0
+is_school_holiday_summer_holidays         0
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Regional groups:</strong> When you don’t know which region a location belongs to,
+set <code class="docutils literal notranslate"><span class="pre">regional_groups=True</span></code>. The transform then adds one column per group of
+subdivisions that share a holiday calendar, and the model learns which group
+matters for each location. The export below fetches all Dutch subdivisions in
+one request. The plot shows each group over 2024. Each row lists its provinces.
+The north and south provinces follow different calendars, so their rows light
+up at different times.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">regional_csv_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">tempfile</span><span class="o">.</span><span class="n">gettempdir</span><span class="p">())</span> <span class="o">/</span> <span class="s2">&quot;openstef_school_holidays_nl_regional_2024.csv&quot;</span>
+<span class="n">SchoolHolidayFeatureAdder</span><span class="p">(</span><span class="n">country_code</span><span class="o">=</span><span class="s2">&quot;NL&quot;</span><span class="p">,</span> <span class="n">regional_groups</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">export_csv</span><span class="p">(</span>
+    <span class="n">regional_csv_path</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2024</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2024</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">regional_holidays</span> <span class="o">=</span> <span class="n">SchoolHolidayFeatureAdder</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span><span class="n">regional_csv_path</span><span class="p">,</span> <span class="n">country_code</span><span class="o">=</span><span class="s2">&quot;NL&quot;</span><span class="p">,</span> <span class="n">regional_groups</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Transform the whole of 2024 at hourly resolution, then keep one value per day.</span>
+<span class="n">year_index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s2">&quot;2024-01-01&quot;</span><span class="p">,</span> <span class="s2">&quot;2024-12-31 23:00&quot;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s2">&quot;1h&quot;</span><span class="p">,</span> <span class="n">tz</span><span class="o">=</span><span class="s2">&quot;UTC&quot;</span><span class="p">)</span>
+<span class="n">year</span> <span class="o">=</span> <span class="n">TimeSeriesDataset</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;load&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="n">year_index</span><span class="p">),</span> <span class="n">sample_interval</span><span class="o">=</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">regional_columns</span> <span class="o">=</span> <span class="n">regional_holidays</span><span class="o">.</span><span class="n">features_added</span><span class="p">()</span>
+<span class="n">daily</span> <span class="o">=</span> <span class="n">regional_holidays</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">year</span><span class="p">)</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">regional_columns</span><span class="p">]</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s2">&quot;D&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+<span class="c1"># Province codes per group, read from the public holiday periods. Group numbers</span>
+<span class="c1"># depend on the export, so read the province list rather than the number.</span>
+<span class="n">group_provinces</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">period</span> <span class="ow">in</span> <span class="n">regional_holidays</span><span class="o">.</span><span class="n">holidays</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">period</span><span class="o">.</span><span class="n">group_code</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">group_provinces</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">period</span><span class="o">.</span><span class="n">group_code</span><span class="p">,</span> <span class="nb">set</span><span class="p">())</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+            <span class="n">code</span><span class="o">.</span><span class="n">removeprefix</span><span class="p">(</span><span class="s2">&quot;NL-&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">code</span> <span class="ow">in</span> <span class="n">period</span><span class="o">.</span><span class="n">subdivisions</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">code</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
+        <span class="p">)</span>
+
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">column</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">group_provinces</span><span class="p">[</span><span class="n">column</span><span class="o">.</span><span class="n">removeprefix</span><span class="p">(</span><span class="s1">&#39;is_school_holiday_&#39;</span><span class="p">)]))</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">regional_columns</span>
+<span class="p">]</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span>
+    <span class="n">go</span><span class="o">.</span><span class="n">Heatmap</span><span class="p">(</span>
+        <span class="n">z</span><span class="o">=</span><span class="n">daily</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">daily</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span>
+        <span class="n">zmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">zmax</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">colorscale</span><span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;white&quot;</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;#1f77b4&quot;</span><span class="p">]],</span>
+        <span class="n">showscale</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Regional school holiday groups, 2024 (blue = holiday)&quot;</span><span class="p">,</span>
+    <span class="n">template</span><span class="o">=</span><span class="s2">&quot;plotly_white&quot;</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">280</span><span class="p">,</span>
+    <span class="n">yaxis</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;automargin&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+<span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Holiday days in 2024 per group:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">daily</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/327b6e7d823ffb5f835fda90aaf00c4adf66735be886cae1b2370d5ac94c5724.png" src="../_images/327b6e7d823ffb5f835fda90aaf00c4adf66735be886cae1b2370d5ac94c5724.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Holiday days in 2024 per group:
+is_school_holiday_0    89
+is_school_holiday_1    44
+is_school_holiday_2    62
+</pre></div>
+</div>
 </div>
 </div>
 </section>
@@ -2121,81 +2263,86 @@ timestamp
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">HolidayFeatureAdder</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>Time</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SchoolHolidayFeatureAdder</span></code></p></td>
+<td><p>Captures load shifts during school holidays</p></td>
+<td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SchoolHolidayFeatureAdder</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Time</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">LagsAdder</span></code></p></td>
 <td><p>“Last Monday” predicts “this Monday”</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">LagsAdder</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p>Time</p></td>
+<tr class="row-even"><td><p>Time</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">RollingAggregatesAdder</span></code></p></td>
 <td><p>Captures baseline trends</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">RollingAggregatesAdder</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p>Time</p></td>
+<tr class="row-odd"><td><p>Time</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DatetimeFeaturesAdder</span></code></p></td>
 <td><p>Sharp tree splits on peak hours</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DatetimeFeaturesAdder</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p>Time</p></td>
+<tr class="row-even"><td><p>Time</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VersionedLagsAdder</span></code></p></td>
 <td><p>Respects data availability for weather lags</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VersionedLagsAdder</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p>Weather</p></td>
+<tr class="row-odd"><td><p>Weather</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DaylightFeatureAdder</span></code></p></td>
 <td><p>Seasonal lighting &amp; solar trends</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DaylightFeatureAdder</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p>Weather</p></td>
+<tr class="row-even"><td><p>Weather</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">AtmosphereDerivedFeaturesAdder</span></code></p></td>
 <td><p>Humidity/density signals</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">AtmosphereDerivedFeaturesAdder</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p>Weather</p></td>
+<tr class="row-odd"><td><p>Weather</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">RadiationDerivedFeaturesAdder</span></code></p></td>
 <td><p>Tilted irradiance = PV input</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">RadiationDerivedFeaturesAdder</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p>Energy</p></td>
+<tr class="row-even"><td><p>Energy</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">WindPowerFeatureAdder</span></code></p></td>
 <td><p>Non-linear power curve</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">WindPowerFeatureAdder</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p>General</p></td>
+<tr class="row-odd"><td><p>General</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Imputer</span></code></p></td>
 <td><p>Handles missing data</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Imputer</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p>General</p></td>
+<tr class="row-even"><td><p>General</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Scaler</span></code></p></td>
 <td><p>Normalizes feature scales</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Scaler</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p>General</p></td>
+<tr class="row-odd"><td><p>General</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">OutlierHandler</span></code></p></td>
 <td><p>Enforces plausible ranges</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">OutlierHandler</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p>General</p></td>
+<tr class="row-even"><td><p>General</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SampleWeighter</span></code></p></td>
 <td><p>Emphasizes peak loads</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SampleWeighter</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p>Validation</p></td>
+<tr class="row-odd"><td><p>Validation</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CompletenessChecker</span></code></p></td>
 <td><p>Rejects incomplete data</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CompletenessChecker</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p>Validation</p></td>
+<tr class="row-even"><td><p>Validation</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">FlatlineChecker</span></code></p></td>
 <td><p>Catches stuck sensors</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">FlatlineChecker</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p>Validation</p></td>
+<tr class="row-odd"><td><p>Validation</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">InputConsistencyChecker</span></code></p></td>
 <td><p>Guards schema drift</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">InputConsistencyChecker</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p>Postprocessing</p></td>
+<tr class="row-even"><td><p>Postprocessing</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">QuantileSorter</span></code></p></td>
 <td><p>Valid prediction intervals</p></td>
 <td><p><code class="xref py py-class docutils literal notranslate"><span class="pre">QuantileSorter</span></code></p></td>
@@ -2235,11 +2382,11 @@ timestamp
       </div>
     </a>
     <a class="right-next"
-       href="ensemble_forecasting.html"
+       href="school_holiday_forecasting.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Ensemble Forecasting</p>
+        <p class="prev-next-title">School Holidays and a Christmas Forecast</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -2250,7 +2397,7 @@ timestamp
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <dialog id="pst-secondary-sidebar-modal" tabindex="-1"></dialog>
                 <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
@@ -2266,6 +2413,7 @@ timestamp
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-domain-transforms">1. Time Domain Transforms</a><ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cyclicfeaturesadder"><code class="xref py py-class docutils literal notranslate"><span class="pre">CyclicFeaturesAdder</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#holidayfeatureadder"><code class="xref py py-class docutils literal notranslate"><span class="pre">HolidayFeatureAdder</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#schoolholidayfeatureadder"><code class="xref py py-class docutils literal notranslate"><span class="pre">SchoolHolidayFeatureAdder</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lagsadder"><code class="xref py py-class docutils literal notranslate"><span class="pre">LagsAdder</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rollingaggregatesadder"><code class="xref py py-class docutils literal notranslate"><span class="pre">RollingAggregatesAdder</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#datetimefeaturesadder"><code class="xref py py-class docutils literal notranslate"><span class="pre">DatetimeFeaturesAdder</span></code></a></li>
@@ -2336,8 +2484,8 @@ timestamp
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=75c7c72ae941e8b558d8"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=75c7c72ae941e8b558d8"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -2357,8 +2505,7 @@ timestamp
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
-    <br/>
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.1.
   </p>
 </div>
       
@@ -2371,7 +2518,7 @@ timestamp
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.24.0.
 </p></div>
       
     </div>
